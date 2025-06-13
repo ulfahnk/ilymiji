@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monthversary</title>
+
+  <!-- Google Font (fallback only, kamu pakai font lokal di CSS) -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-[#E3EEB2] min-h-screen flex items-center justify-center">
+
+  
+ <!-- Login Page -->
+<div id="loginPage" class="w-full h-full flex flex-col items-center justify-center">
+  <img src="images/couple.jpg" alt="Us" class="rounded-full w-32 h-32 mb-4 border-4 border-pink-200 shadow-md floating">
+  <h1 class="text-2xl text-[#4E6688] mb-2">Welcome to Our Monthversary!</h1>
+  <p class="mb-4 text-[#332D56]">Enter your special number 💕</p>
+  <input id="codeInput" type="text" placeholder="day we met 💕" class="px-4 py-2 rounded-xl border border-[#71C0BB] mb-4 focus:outline-none"/>
+  <button onclick="checkCode()" class="bg-[#71C0BB] hover:bg-[#4E6688] text-white px-6 py-2 rounded-full transition-all">Login</button>
+</div>
+
+
+  <!-- Main Page -->
+  <div id="mainPage" class="hidden flex flex-col items-center justify-center text-center px-4">
+    <div class="relative mb-8">
+      <img src="images/envelope.png" alt="Love Envelope" id="envelope" class="w-72 cursor-pointer floating transition-transform hover:scale-105">
+      <div id="loveLetter" class="absolute top-12 left-1/2 -translate-x-1/2 hidden bg-white p-4 rounded-lg shadow-lg w-72 max-w-full z-10">
+        <p class="text-pink-600 font-semibold text-sm leading-relaxed font-[CuteLove]">
+          Dear my love 💖,<br><br>
+          Thank you for being by my side. Every second with you feels magical. Let's always be this close, forever and ever 🌸<br><br>
+          Love,<br>
+          Ulfa 💌
+        </p>
+      </div>
+    </div>
+
+   <div class="relative w-40 h-40">
+  <img src="images/cat-blink.png" alt="Cute Cat" class="w-full h-full object-contain blink-animation" />
+</div>
+
+
+    <h2 class="text-3xl text-[#332D56] font-bold mb-4">Our Monthversary 💌</h2>
+    <p class="mb-6 text-[#4E6688]">Let's see how long we've been together!</p>
+    <button onclick="showTimeTogether()" class="bg-[#FFB6C1] hover:bg-[#F48FB1] text-white px-6 py-2 rounded-full shadow">See Time</button>
+    <div id="timeTogether" class="mt-6 text-lg text-[#332D56] hidden"></div>
+  </div>
+
+  <!-- Audio Player -->
+  <audio id="bgMusic" src="assets/music.mp3" loop></audio>
+  <button id="musicToggle" class="fixed bottom-4 right-4 bg-[#FFB6C1] text-white px-4 py-2 rounded-full shadow-lg z-50 hover:bg-[#F48FB1]">🔊 Music On</button>
+
+  <!-- Confetti -->
+  <canvas id="confetti-canvas" class="fixed top-0 left-0 w-full h-full pointer-events-none z-40"></canvas>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <!-- JavaScript kamu -->
+  <script src="js/script.js" defer></script>
+</body>
+</html>

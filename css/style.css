@@ -1,0 +1,63 @@
+/* css/style.css */
+@font-face {
+  font-family: 'MorallySerif';
+  src: url('../fonts/Morally Serif.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'CuteLove';
+  src: url('../fonts/Cute Love.ttf') format('truetype');
+}
+
+body {
+  font-family: 'CuteLove', cursive;
+  background-color: #E3EEB2;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'MorallySerif', serif;
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes blink {
+  0%, 90%, 100% {
+    clip-path: inset(0 0 0 0);
+  }
+  92%, 96% {
+    clip-path: inset(45% 0 45% 0);
+  }
+}
+
+.blink-animation {
+  animation: blink 5s infinite;
+}
+
+#musicToggle {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  font-family: 'CuteLove', cursive;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  z-index: 999;
+}
+
+#musicToggle:hover {
+  transform: scale(1.05);
+}
